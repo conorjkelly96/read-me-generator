@@ -7,7 +7,9 @@ const mainQuestions = [];
 // initialise user interaction
 const init = async () => {
   // prompt questions
+  const answers = await inquirer.prompt(mainQuestions);
   // generate read me
+
   // write readme generated
 };
 
