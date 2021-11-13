@@ -66,7 +66,6 @@ const testAnswer = [
 const generateReadme = (answers) => {
   return `${utils.generateTitle(answers)}
 
-  // this is going to be generated for each section
   ${utils.generateToC(answers)}
 
   ${utils.generateDescription(answers)}
