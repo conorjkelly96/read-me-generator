@@ -9,14 +9,14 @@ const generateTitle = (answers) => {
 };
 
 // generate table of contents
-const generateToC = () => {
+const generateToC = (answers) => {
   // place pseudocode here
   return `## Table of Contents
   
   - [Description](#description)
-  - [Installation](#installation)
+  ${answers.generateInstallation ? `- [Installation](#installation)` : ""}
   - [Usage](#usage)
-  - [Tests](#tests)
+  ${answers.generateTests ? `  - [Tests](#tests)` : ""}
   - [Contributing](#contributing)
   - [License](#license)`;
 };
@@ -53,6 +53,18 @@ const generateUsage = (answers) => {
   \`\`\``;
 };
 
+// generate the Usage
+const generateTests = (answers) => {
+  // place pseudocode here
+  return `## Tests
+  
+  To test the application run the following tests:
+  
+  \`\`\`
+  ${answers.test}
+  \`\`\``;
+};
+
 // generate the Contributing section
 const generateContributing = (answers) => {
   return `## Contributing
@@ -73,6 +85,7 @@ module.exports = {
   generateTitle,
   generateToC,
   generateDescription,
+  generateTests
   generateContributing,
   generateLicense,
   generateInstallation,

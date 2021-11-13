@@ -16,9 +16,9 @@ const mainQuestions = [
     message: "Enter a description for your application:",
   },
   {
-    type: "input",
+    type: "confirm",
     name: "installation",
-    message: "Enter the installation process for your application:",
+    message: "Does your application have an installation process?",
   },
   {
     type: "input",
@@ -26,14 +26,31 @@ const mainQuestions = [
     message: "How do people use your application?",
   },
   {
+    type: "confirm",
+    name: "tests",
+    message: "Does your application come with pre-defined tests?",
+  },
+  {
     type: "input",
     name: "contribute",
     message: "How do people contribute to your application?",
   },
   {
-    type: "input",
+    type: "list",
     name: "license",
     message: "What license requirements apply to your application?",
+    choices: [
+      { name: "MIT", value: "mit" },
+      { name: "none", value: "" },
+    ],
+  },
+];
+
+const installationAnswer = [
+  {
+    type: "input",
+    name: "installationProcess",
+    message: "Enter the installation process for your application:",
   },
 ];
 
@@ -47,6 +64,8 @@ const generateReadme = (answers) => {
   ${utils.generateDescription(answers)}
 
   ${utils.generateInstallation(answers)}
+
+  ${utils.generateTests(answers)}
 
   ${utils.generateUsage(answers)}
 
