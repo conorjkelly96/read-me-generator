@@ -1,10 +1,12 @@
 // install inquirer
 const inquirer = require("inquirer");
+const utils = require("./utils");
+const fileGen = require("./generate-file");
 
 // questions that will be prompted to the user
 const mainQuestions = [];
 
-// initialise user interaction
+// initialize user interaction
 const init = async () => {
   // prompt questions
   const answers = await inquirer.prompt(mainQuestions);
