@@ -40,8 +40,10 @@ const mainQuestions = [
     name: "license",
     message: "What license requirements apply to your application?",
     choices: [
-      { name: "MIT", value: "mit" },
-      { name: "none", value: "" },
+      "MIT",
+      "GNU General Public License 2.0",
+      "Apache License 2.0",
+      "GNU General Public License 3.0",
     ],
   },
 ];
@@ -63,16 +65,20 @@ const testAnswer = [
 ];
 
 // generating Read Me document
-const generateReadme = (answers) => {
+const generateReadme = (answers, installationAnswer, testAnswer) => {
   return `${utils.generateTitle(answers)}
 
   ${utils.generateToC(answers)}
 
   ${utils.generateDescription(answers)}
 
-  ${answers.generateInstallation ? utils.generateInstallation(answers) : ""}
+  ${
+    answers.generateInstallation
+      ? utils.generateInstallation(installationAnswer)
+      : ""
+  }
 
-  ${answers.generateTests ? utils.generateTests(answers) : ""}
+  ${answers.generateTests ? utils.generateTests(testAnswer) : ""}
 
   ${utils.generateUsage(answers)}
 
@@ -85,7 +91,11 @@ const generateReadme = (answers) => {
 // initialize user interaction
 const init = async () => {
   // prompt questions
-  const answers = await inquirer.prompt(mainQuestions);
+  const answers = await inquirer.prompt(
+    mainQuestions,
+    installationAnswer,
+    testAnswer
+  );
   console.log(answers);
 
   // generate read me
