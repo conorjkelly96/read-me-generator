@@ -85,7 +85,7 @@ module.exports = {
   generateTitle,
   generateToC,
   generateDescription,
-  generateTests
+  generateTests,
   generateContributing,
   generateLicense,
   generateInstallation,

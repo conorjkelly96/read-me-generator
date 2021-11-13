@@ -1,38 +1,48 @@
-# Demand Planning Tool ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)
+# The Algorithim ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)
 
-## Table of Contents
+  // this is going to be generated for each section
+  ## Table of Contents
+  
+  - [Description](#description)
+  
+  - [Usage](#usage)
+  
+  - [Contributing](#contributing)
+  - [License](#license)
 
-- [Description](#description)
+  ## Description
+  
+  the best
 
-- [Usage](#usage)
-- [Tests](#tests)
-- [Contributing](#contributing)
-- [License](#license)
+  ## Installation
+  
+  Run the following script to install the packages required for the application:
+  
+  ```
+  true
+  ```
 
-## Description
+  ## Tests
+  
+  To test the application run the following tests:
+  
+  ```
+  undefined
+  ```
 
-This application enables small business owners to use historic sales figures to calculate future demand using linear regression
+  ## Usage
+  
+  To use the application run the following script:
+  
+  ```
+  
+  ```
 
-## Installation
+  ## Contributing
+  
+  
 
-Run the following script to install the packages required for the application:
-
-```
-true
-```
-
-## Usage
-
-To use the application run the following script:
-
-```
-node run start
-```
-
-## Contributing
-
-Please email me at the following: conorjkelly96@gmail.com
-
-## License
-
-mit
+  ## License
+  
+  mit
+  

@@ -54,6 +54,14 @@ const installationAnswer = [
   },
 ];
 
+const testAnswer = [
+  {
+    type: "input",
+    name: "testProcess",
+    message: "Enter the testing process for your application:",
+  },
+];
+
 // generating Read Me document
 const generateReadme = (answers) => {
   return `${utils.generateTitle(answers)}
@@ -63,9 +71,9 @@ const generateReadme = (answers) => {
 
   ${utils.generateDescription(answers)}
 
-  ${utils.generateInstallation(answers)}
+  ${answers.generateInstallation ? utils.generateInstallation(answers) : ""}
 
-  ${utils.generateTests(answers)}
+  ${answers.generateTests ? utils.generateTests(answers) : ""}
 
   ${utils.generateUsage(answers)}
 
