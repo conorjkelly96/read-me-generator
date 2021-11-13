@@ -7,28 +7,52 @@ const fileGen = require("./file-gen");
 const mainQuestions = [
   {
     type: "input",
-    name: "firstName",
-    message: "What is your first name?",
+    name: "title",
+    message: "What is your project called?",
+  },
+  {
+    type: "input",
+    name: "description",
+    message: "Enter a description for your application:",
+  },
+  {
+    type: "input",
+    name: "installation",
+    message: "Enter the installation process for your application:",
+  },
+  {
+    type: "input",
+    name: "usage",
+    message: "How do people use your application?",
+  },
+  {
+    type: "input",
+    name: "contribute",
+    message: "How do people contribute to your application?",
+  },
+  {
+    type: "input",
+    name: "contribute",
+    message: "What license requirements apply to your application?",
   },
 ];
 
 // generating Read Me document
 const generateReadme = (answers) => {
-  return `${generateTitle(answers)}
+  return `${utils.generateTitle(answers)}
 
-  ${generateTableOfContents(answers)}
-  
-  ${generateDescription(answers)}
-  
-  ${generateInstallation(answers)}
-  
-  ${generateUsage(answers)}
-  
-  ${generateTests(answers)}
-  
-  ${generateContributing(answers)}
-  
-  ${generateLicense(answers)}
+  // this is going to be generated for each section
+  ${utils.generateToC(answers)}
+
+  ${utils.generateDescription(answers)}
+
+  ${utils.generateInstallation(answers)}
+
+  ${utils.generateUsage(answers)}
+
+  ${utils.generateContributing(answers)}
+
+  ${utils.generateLicense(answers)}
   `;
 };
 
