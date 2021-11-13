@@ -1,7 +1,7 @@
-// install inquirer
+// install dependencies
 const inquirer = require("inquirer");
 const utils = require("./utils");
-const fileGen = require("./file-gen");
+const { writeToFile } = require("./file-gen");
 
 // questions that will be prompted to the user
 const mainQuestions = [
@@ -32,7 +32,7 @@ const mainQuestions = [
   },
   {
     type: "input",
-    name: "contribute",
+    name: "license",
     message: "What license requirements apply to your application?",
   },
 ];
@@ -66,7 +66,7 @@ const init = async () => {
   const readMe = generateReadme(answers);
 
   // write readme generated
-  fileGen.writeToFile("README.md", readMe);
+  writeToFile("./README.md", readMe);
 };
 
 init();

@@ -1,13 +1,15 @@
 // all functions are to be exported to index.js
 
+const inquirer = require("inquirer");
+
 // generate title
 const generateTitle = (answers) => {
   // place pseudocode here
-  return `# TITLE ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)`;
+  return `# ${answers.title} ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)`;
 };
 
 // generate table of contents
-const generateToC = (answers) => {
+const generateToC = () => {
   // place pseudocode here
   return `## Table of Contents
   
@@ -24,7 +26,7 @@ const generateDescription = (answers) => {
   // place pseudocode here
   return `## Description
   
-  ADD TEXT HERE`;
+  ${answers.description}`;
 };
 
 // generate the installation
@@ -35,7 +37,7 @@ const generateInstallation = (answers) => {
   Run the following script to install the packages required for the application:
   
   \`\`\`
-  ADD TEXT HERE
+  ${answers.installation}
   \`\`\``;
 };
 
@@ -47,7 +49,7 @@ const generateUsage = (answers) => {
   To use the application run the following script:
   
   \`\`\`
-  ADD TEXT HERE
+  ${answers.usage}
   \`\`\``;
 };
 
@@ -55,7 +57,7 @@ const generateUsage = (answers) => {
 const generateContributing = (answers) => {
   return `## Contributing
   
-  ADD TEXT HERE`;
+  ${answers.contribute}`;
 };
 
 // generate the License
@@ -63,7 +65,7 @@ const generateLicense = (answers) => {
   // place pseudocode here
   return `## License
   
-  ADD TEXT HERE`;
+  ${answers.license}`;
 };
 
 // exporting modules for external use
