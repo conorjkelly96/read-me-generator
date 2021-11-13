@@ -84,7 +84,7 @@ const generateReadme = (answers, installationAnswer, testAnswer) => {
 
   ${utils.generateContributing(answers)}
 
-  ${utils.generateLicense(answers)}
+  ${utils.generateLicenseBadge(answers)}
   `;
 };
 

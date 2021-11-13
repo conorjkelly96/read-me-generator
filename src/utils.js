@@ -1,11 +1,9 @@
 // all functions are to be exported to index.js
 
-const inquirer = require("inquirer");
-
 // generate title
 const generateTitle = (answers) => {
   // place pseudocode here
-  return `# ${answers.title} ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)`;
+  return `# ${answers.title}`;
 };
 
 // generate table of contents
@@ -65,19 +63,30 @@ const generateTests = (answers) => {
   \`\`\``;
 };
 
+// dynamically render license badge depending on user choice
+const generateLicenseBadge = (answers) => {
+  const licenseType = answers.license[0];
+  let licenseString = " ";
+  if (licenseType === "MIT") {
+    licenseString = `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`;
+  }
+  if (licenseType === "GNU General Public License 2.0") {
+    licenseString = `![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)`;
+  }
+  if (licenseType === "Apache License 2.0") {
+    licenseString = `![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)`;
+  }
+  if (licenseType === "GNU General Public License 3.0") {
+    licenseString = `![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)`;
+  }
+  return licenseString;
+};
+
 // generate the Contributing section
 const generateContributing = (answers) => {
   return `## Contributing
   
   ${answers.contribute}`;
-};
-
-// generate the License
-const generateLicense = (answers) => {
-  // place pseudocode here
-  return `## License
-  
-  ${answers.license}`;
 };
 
 // exporting modules for external use
@@ -87,7 +96,7 @@ module.exports = {
   generateDescription,
   generateTests,
   generateContributing,
-  generateLicense,
   generateInstallation,
   generateUsage,
+  generateLicenseBadge,
 };

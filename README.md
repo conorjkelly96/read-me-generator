@@ -1,6 +1,5 @@
-# The Alogrithim ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)
+# The Algo
 
-  // this is going to be generated for each section
   ## Table of Contents
   
   - [Description](#description)
@@ -12,7 +11,7 @@
 
   ## Description
   
-  The best 
+  The Aglo 
 
   
 
@@ -30,7 +29,5 @@
   
   conor.kelly@oracle.com
 
-  ## License
-  
-  mit
+   
   
