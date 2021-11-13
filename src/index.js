@@ -60,6 +60,7 @@ const generateReadme = (answers) => {
 const init = async () => {
   // prompt questions
   const answers = await inquirer.prompt(mainQuestions);
+  console.log(answers);
 
   // generate read me
   const readMe = generateReadme(answers);
