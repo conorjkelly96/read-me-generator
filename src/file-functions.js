@@ -15,7 +15,27 @@ const generateDescription = (answers) => {
   // place pseudocode here
 };
 
-// generate license
+// generate the installation
+const generateInstallation = (answers) => {
+  // place pseudocode here
+};
+
+// generate the Usage
+const generateUsage = (answers) => {
+  // place pseudocode here
+};
+
+// generate the License
 const generateLicense = (answers) => {
   // place pseudocode here
+};
+
+// exporting modules for external use
+module.exports = {
+  generateTitle,
+  generateToC,
+  generateDescription,
+  generateLicense,
+  generateInstallation,
+  generateUsage,
 };
