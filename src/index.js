@@ -4,6 +4,7 @@ const utils = require("./utils");
 const { writeToFile } = require("./file-gen");
 
 // questions that will be prompted to the user
+// think about splitting this into part 1 and 2
 const mainQuestions = [
   {
     type: "input",
@@ -91,12 +92,11 @@ const generateReadme = (answers, installationAnswer, testAnswer) => {
 // initialize user interaction
 const init = async () => {
   // prompt questions
-  const answers = await inquirer.prompt(
-    mainQuestions,
-    installationAnswer,
-    testAnswer
-  );
-  console.log(answers);
+  const answers = await inquirer.prompt(mainQuestions);
+
+  // if installation = T, then prompt installation question
+
+  // if testing = T, then prompt test question
 
   // generate read me
   const readMe = generateReadme(answers);
