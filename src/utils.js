@@ -59,26 +59,34 @@ const generateTests = (answers) => {
   To test the application run the following tests:
   
   \`\`\`
-  ${answers.test}
+  ${answers.tests}
   \`\`\``;
 };
 
 // dynamically render license badge depending on user choice
+// const generateLicenseBadge = (answers) => {
+//   let licenseString;
+//   if (answers.choices == "GNU General Public License 2.0") {
+//     licenseString = ``;
+//   } else {
+//     licenseString = `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`;
+//   }
+
+//   return licenseString;
+// };
+
 const generateLicenseBadge = (answers) => {
-  const licenseType = answers.license[0];
-  let licenseString = " ";
-  if (licenseType === "MIT") {
+  let licenseString;
+  if (answers.choices === "MIT") {
     licenseString = `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`;
-  }
-  if (licenseType === "GNU General Public License 2.0") {
+  } else if (answers.choices === "GNU General Public License 2.0") {
     licenseString = `![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)`;
-  }
-  if (licenseType === "Apache License 2.0") {
+  } else if (answers.choices === "Apache License 2.0") {
     licenseString = `![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)`;
-  }
-  if (licenseType === "GNU General Public License 3.0") {
+  } else if (answers.choices === "GNU General Public License 3.0") {
     licenseString = `![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)`;
   }
+  console.log(licenseString);
   return licenseString;
 };
 
@@ -87,6 +95,11 @@ const generateContributing = (answers) => {
   return `## Contributing
   
   ${answers.contribute}`;
+};
+
+const generateLicense = (answers) => {
+  return `## License
+Application License: ${answers.license}`;
 };
 
 // exporting modules for external use
@@ -99,4 +112,5 @@ module.exports = {
   generateInstallation,
   generateUsage,
   generateLicenseBadge,
+  generateLicense,
 };

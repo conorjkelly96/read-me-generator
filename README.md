@@ -1,4 +1,6 @@
-# The Algo
+undefined
+
+  # The Algo
 
   ## Table of Contents
   
@@ -11,23 +13,37 @@
 
   ## Description
   
-  The Aglo 
+  The Algo 
 
+  ## Installation
   
+  Run the following script to install the packages required for the application:
+  
+  ```
+  true
+  ```
 
+  ## Tests
   
+  To test the application run the following tests:
+  
+  ```
+  true
+  ```
 
   ## Usage
   
   To use the application run the following script:
   
   ```
-  npm run start
+  Yes 
   ```
 
   ## Contributing
   
-  conor.kelly@oracle.com
+  Yes
+  
+  ## License
+Application License: MIT
 
-   
   
