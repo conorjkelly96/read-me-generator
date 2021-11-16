@@ -23,6 +23,12 @@ const mainQuestions = [
   },
   {
     type: "input",
+    name: "installationProcess",
+    message: "Enter the installation process for your application",
+    when: (answers) => answers.installation === true,
+  },
+  {
+    type: "input",
     name: "usage",
     message: "How do people use your application?",
   },

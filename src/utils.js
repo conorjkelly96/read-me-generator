@@ -29,14 +29,17 @@ const generateDescription = (answers) => {
 
 // generate the installation
 const generateInstallation = (answers) => {
-  // place pseudocode here
-  return `## Installation
+  if (answers.installation) {
+    return `## Installation
   
   Run the following script to install the packages required for the application:
   
   \`\`\`
-  ${answers.installation}
+  ${answers.installationProcess}
   \`\`\``;
+  } else {
+    return "";
+  }
 };
 
 // generate the Usage

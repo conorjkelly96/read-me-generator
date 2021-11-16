@@ -1,6 +1,6 @@
 undefined
 
-  # The Algo
+  # The Project Title
 
   ## Table of Contents
   
@@ -13,14 +13,14 @@ undefined
 
   ## Description
   
-  The Algo 
+  The Description of the project
 
   ## Installation
   
   Run the following script to install the packages required for the application:
   
   ```
-  true
+  npm run installation process
   ```
 
   ## Tests
@@ -28,7 +28,7 @@ undefined
   To test the application run the following tests:
   
   ```
-  true
+  false
   ```
 
   ## Usage
@@ -36,12 +36,12 @@ undefined
   To use the application run the following script:
   
   ```
-  Yes 
+  they use it wisely
   ```
 
   ## Contributing
   
-  Yes
+  conor.j.kelly@oracle.com
   
   ## License
 Application License: MIT
