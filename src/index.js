@@ -39,6 +39,12 @@ const mainQuestions = [
   },
   {
     type: "input",
+    name: "testProcess",
+    message: "Enter the test process for your application",
+    when: (answers) => answers.tests === true,
+  },
+  {
+    type: "input",
     name: "contribute",
     message: "How do people contribute to your application?",
   },

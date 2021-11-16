@@ -1,6 +1,6 @@
 undefined
 
-  # The Project Title
+  # Demand Planning Calculation
 
   ## Table of Contents
   
@@ -13,14 +13,14 @@ undefined
 
   ## Description
   
-  The Description of the project
+  This project calculates demand forecasts for inventory items based on historic sales figures using linear regression. 
 
   ## Installation
   
   Run the following script to install the packages required for the application:
   
   ```
-  npm run installation process
+  npm run start
   ```
 
   ## Tests
@@ -28,7 +28,7 @@ undefined
   To test the application run the following tests:
   
   ```
-  false
+  This repository contains Testground test plans for libp2p components.
   ```
 
   ## Usage
@@ -36,12 +36,12 @@ undefined
   To use the application run the following script:
   
   ```
-  they use it wisely
+  npm run start
   ```
 
   ## Contributing
   
-  conor.j.kelly@oracle.com
+  Please contact me at conorjkelly96@gmail.com
   
   ## License
 Application License: MIT

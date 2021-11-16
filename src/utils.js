@@ -56,14 +56,18 @@ const generateUsage = (answers) => {
 
 // generate the Usage
 const generateTests = (answers) => {
-  // place pseudocode here
-  return `## Tests
+  if (answers.tests) {
+    // place pseudocode here
+    return `## Tests
   
   To test the application run the following tests:
   
   \`\`\`
-  ${answers.tests}
+  ${answers.testProcess}
   \`\`\``;
+  } else {
+    return "";
+  }
 };
 
 // dynamically render license badge depending on user choice
