@@ -46,7 +46,7 @@ const mainQuestions = [
   {
     type: "input",
     name: "contribute",
-    message: "How do people contribute to your application?",
+    message: "Enter you email address:",
   },
   {
     type: "input",
@@ -69,23 +69,14 @@ const mainQuestions = [
 // generating Read Me document
 const generateReadme = (answers) => {
   return `${utils.generateLicenseBadge(answers)}
-
-  ${utils.generateTitle(answers)}
-
-  ${utils.generateToC(answers)}
-
-  ${utils.generateDescription(answers)}
-
-  ${utils.generateInstallation(answers)}
-
-  ${utils.generateTests(answers)}
-
-  ${utils.generateUsage(answers)}
-
-  ${utils.generateContributing(answers)}
-  
-  ${utils.generateLicense(answers)}
-
+${utils.generateTitle(answers)}
+${utils.generateToC(answers)}
+${utils.generateDescription(answers)}
+${utils.generateInstallation(answers)}
+${utils.generateTests(answers)}
+${utils.generateUsage(answers)}
+${utils.generateContributing(answers)}
+${utils.generateLicense(answers)}
   `;
 };
 

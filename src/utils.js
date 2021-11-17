@@ -1,41 +1,53 @@
 // all functions are to be exported to index.js
 
 // generate title
-const generateTitle = (answers) => {
+const generateTitle = ({ title }) => {
   // place pseudocode here
-  return `# ${answers.title}`;
+  return `# ${title}`;
 };
 
-// generate table of contents
-const generateToC = ({ tests, installation }) => {
-  // place pseudocode here
-  return `## Table of Contents
-  
-  - [Description](#description)
-  ${installation ? `- [Installation](#installation)` : ""}
-  - [Usage](#usage)
-  ${tests ? `- [Tests](#tests)` : ""}
-  - [Contributing](#contributing)
-  - [License](#license)`;
+const getOtherContents = ({ installation, usage, tests }) => {
+  const contents = [];
+
+  if (installation) contents.push("- [Installation](#installation)");
+
+  if (usage) contents.push("- [Usage](#usage)");
+
+  if (tests) contents.push("- [Tests](#tests)");
+
+  return contents;
+};
+
+const generateToC = (answers) => {
+  const contents = [
+    "- [Description](#description)",
+    ...getOtherContents(answers),
+    "- [Contributing](#contributing)",
+    "- [License](#license)",
+  ];
+
+  return `## Table of Contents\n
+${contents.join("\n")}
+`;
 };
 
 // generate description
-const generateDescription = (answers) => {
+const generateDescription = ({ description }) => {
   // place pseudocode here
   return `## Description
   
-  ${answers.description}`;
+  ${description}`;
 };
 
 // generate the installation
-const generateInstallation = (answers) => {
-  if (answers.installation) {
+const generateInstallation = ({ installation, installationProcess }) => {
+  if (installation) {
     return `## Installation
   
   Run the following script to install the packages required for the application:
   
   \`\`\`
-  ${answers.installationProcess}
+  ${installationProcess}
   \`\`\``;
   } else {
     return "";
@@ -43,60 +55,58 @@ const generateInstallation = (answers) => {
 };
 
 // generate the Usage
-const generateUsage = (answers) => {
+const generateUsage = ({ usage }) => {
   // place pseudocode here
   return `## Usage
   
   To use the application run the following script:
   
   \`\`\`
-  ${answers.usage}
+  ${usage}
   \`\`\``;
 };
 
 // generate the Usage
-const generateTests = (answers) => {
-  if (answers.tests) {
+const generateTests = ({ tests, testProcess }) => {
+  if (tests) {
     // place pseudocode here
     return `## Tests
   
   To test the application run the following tests:
   
   \`\`\`
-  ${answers.testProcess}
+  ${testProcess}
   \`\`\``;
   } else {
     return "";
   }
 };
 
-const generateLicenseBadge = (answers) => {
+const generateLicenseBadge = ({ license }) => {
   let licenseString;
-  if (answers.license === "MIT") {
+  if (license === "MIT") {
     licenseString = `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`;
-  } else if (answers.license === "GNU General Public License 2.0") {
+  } else if (license === "GNU General Public License 2.0") {
     licenseString = `![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)`;
-  } else if (answers.license === "Apache License 2.0") {
+  } else if (license === "Apache License 2.0") {
     licenseString = `![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)`;
-  } else if (answers.license === "GNU General Public License 3.0") {
+  } else if (license === "GNU General Public License 3.0") {
     licenseString = `![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)`;
   }
-  console.log(licenseString);
   return licenseString;
 };
 
 // generate the Contributing section
-const generateContributing = (answers) => {
+const generateContributing = ({ contribute, github }) => {
   return `## Contributing
+  If you'd like to contact me regarding application improvements, please email me at: ${contribute}
   
-  ${answers.contribute}
-  
-  My GitHub profile: https://github.com/${answers.github}`;
+  My GitHub profile: [${github}](https://github.com/${github})`;
 };
 
-const generateLicense = (answers) => {
+const generateLicense = ({ license }) => {
   return `## License
-Application License: ${answers.license}`;
+  This project is licensed under ${license}`;
 };
 
 // exporting modules for external use

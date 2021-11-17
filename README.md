@@ -1,51 +1,42 @@
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)
+# hte pro
+## Table of Contents
 
-  # The Project
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Tests](#tests)
+- [Contributing](#contributing)
+- [License](#license)
 
-  ## Table of Contents
+## Description
   
-  - [Description](#description)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Tests](#tests)
-  - [Contributing](#contributing)
-  - [License](#license)
-
-  ## Description
-  
-  The Project
-
-  ## Installation
+  the
+## Installation
   
   Run the following script to install the packages required for the application:
   
   ```
-  install it 
+  n
   ```
-
-  ## Tests
+## Tests
   
   To test the application run the following tests:
   
   ```
-  test it
+  y
   ```
-
-  ## Usage
+## Usage
   
   To use the application run the following script:
   
   ```
-  run it nice
+  n
   ```
-
-  ## Contributing
+## Contributing
+  If you'd like to contact me regarding application improvements, please email me at: conorjkelly
   
-  Please email me at conorjkelly96@gmail.com
-  
-  My GitHub profile: https://github.com/conorjkelly96
-  
-  ## License
-Application License: MIT
-
+  My GitHub profile: [conor](https://github.com/conor)
+## License
+  This project is licensed under Apache License 2.0
   
