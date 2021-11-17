@@ -49,6 +49,11 @@ const mainQuestions = [
     message: "How do people contribute to your application?",
   },
   {
+    type: "input",
+    name: "github",
+    message: "Enter your github username:",
+  },
+  {
     type: "list",
     name: "license",
     message: "What license requirements apply to your application?",

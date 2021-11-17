@@ -7,14 +7,14 @@ const generateTitle = (answers) => {
 };
 
 // generate table of contents
-const generateToC = (answers) => {
+const generateToC = ({ tests, installation }) => {
   // place pseudocode here
   return `## Table of Contents
   
   - [Description](#description)
-  ${answers.generateInstallation ? `- [Installation](#installation)` : ""}
+  ${installation ? `- [Installation](#installation)` : ""}
   - [Usage](#usage)
-  ${answers.generateTests ? `  - [Tests](#tests)` : ""}
+  ${tests ? `- [Tests](#tests)` : ""}
   - [Contributing](#contributing)
   - [License](#license)`;
 };
@@ -71,7 +71,6 @@ const generateTests = (answers) => {
 };
 
 const generateLicenseBadge = (answers) => {
-  console.log(answers);
   let licenseString;
   if (answers.license === "MIT") {
     licenseString = `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`;
@@ -90,7 +89,9 @@ const generateLicenseBadge = (answers) => {
 const generateContributing = (answers) => {
   return `## Contributing
   
-  ${answers.contribute}`;
+  ${answers.contribute}
+  
+  My GitHub profile: https://github.com/${answers.github}`;
 };
 
 const generateLicense = (answers) => {

@@ -1,26 +1,26 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-  # test
+  # The Project
 
   ## Table of Contents
   
   - [Description](#description)
-  
+  - [Installation](#installation)
   - [Usage](#usage)
-  
+  - [Tests](#tests)
   - [Contributing](#contributing)
   - [License](#license)
 
   ## Description
   
-  test
+  The Project
 
   ## Installation
   
   Run the following script to install the packages required for the application:
   
   ```
-  test
+  install it 
   ```
 
   ## Tests
@@ -28,7 +28,7 @@
   To test the application run the following tests:
   
   ```
-  t
+  test it
   ```
 
   ## Usage
@@ -36,12 +36,14 @@
   To use the application run the following script:
   
   ```
-  tst
+  run it nice
   ```
 
   ## Contributing
   
-  t
+  Please email me at conorjkelly96@gmail.com
+  
+  My GitHub profile: https://github.com/conorjkelly96
   
   ## License
 Application License: MIT
