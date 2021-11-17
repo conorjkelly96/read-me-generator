@@ -70,27 +70,16 @@ const generateTests = (answers) => {
   }
 };
 
-// dynamically render license badge depending on user choice
-// const generateLicenseBadge = (answers) => {
-//   let licenseString;
-//   if (answers.choices == "GNU General Public License 2.0") {
-//     licenseString = ``;
-//   } else {
-//     licenseString = `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`;
-//   }
-
-//   return licenseString;
-// };
-
 const generateLicenseBadge = (answers) => {
+  console.log(answers);
   let licenseString;
-  if (answers.choices === "MIT") {
+  if (answers.license === "MIT") {
     licenseString = `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`;
-  } else if (answers.choices === "GNU General Public License 2.0") {
+  } else if (answers.license === "GNU General Public License 2.0") {
     licenseString = `![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)`;
-  } else if (answers.choices === "Apache License 2.0") {
+  } else if (answers.license === "Apache License 2.0") {
     licenseString = `![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)`;
-  } else if (answers.choices === "GNU General Public License 3.0") {
+  } else if (answers.license === "GNU General Public License 3.0") {
     licenseString = `![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)`;
   }
   console.log(licenseString);

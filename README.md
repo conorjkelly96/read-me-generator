@@ -1,6 +1,6 @@
-undefined
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-  # Demand Planning Calculation
+  # test
 
   ## Table of Contents
   
@@ -13,14 +13,14 @@ undefined
 
   ## Description
   
-  This project calculates demand forecasts for inventory items based on historic sales figures using linear regression. 
+  test
 
   ## Installation
   
   Run the following script to install the packages required for the application:
   
   ```
-  npm run start
+  test
   ```
 
   ## Tests
@@ -28,7 +28,7 @@ undefined
   To test the application run the following tests:
   
   ```
-  This repository contains Testground test plans for libp2p components.
+  t
   ```
 
   ## Usage
@@ -36,12 +36,12 @@ undefined
   To use the application run the following script:
   
   ```
-  npm run start
+  tst
   ```
 
   ## Contributing
   
-  Please contact me at conorjkelly96@gmail.com
+  t
   
   ## License
 Application License: MIT
