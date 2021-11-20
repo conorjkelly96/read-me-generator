@@ -89,7 +89,7 @@ const init = async () => {
   const readMe = generateReadme(answers);
 
   // write readme generated
-  writeToFile("./README.md", readMe);
+  writeToFile("./user_read_me.md", readMe);
 };
 
 init();
