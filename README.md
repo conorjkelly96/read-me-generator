@@ -12,7 +12,7 @@ This application solves the problem of having to create a `README.md` file again
 
 ## Link to Walkthrough
 
-[Click here!](https://conorjkelly96.github.io/personal-day-planner/)
+[Click here!](https://drive.google.com/drive/folders/16RCf0QlpeYoYZqGemizGHn3mG5tbC2T9)
 
 ## Solution Overview
 
